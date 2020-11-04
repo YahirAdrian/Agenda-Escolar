@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Panel de Control</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Administrar Contenido</h1>
+        </header>
+        
+
+        <section>
+            <h2 id="radius">Configruración de contenido</h2>
+
+            <div id="config-tabla">
+                <h2 id="actualizacion">Fecha de Actulizacion:</h2>
+                <div class="caja_fecha">
+                    <p> Fecha y hora: </p>
+                    <input type="datetime-local" id="fecha" name="fecha"/>
+                </div>
+                <h2 id="rotulo">Tareas</h2>
+                <table class="tabla tareas">
+                    <tr class="principal">
+                        <td>Materia</td>
+                        <td>Tareas</td>
+                        <td>Observacion</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="materia_tarea" name="materia_tarea"/></td>
+                        <td><input type="text" id="tarea" name="tarea" /></td>
+                        <td><input type="text" id="observavcion" name="observacion"/></td>
+                    </tr>
+                </table>
+
+                <button>Agregar Fila</button>
+            </div>
+
+            <div id="config-tabla">
+                <h2 id="rotulo">Reuniones</h2>
+                <table class="tabla reuniones">
+                    <tr class="principal">
+                        <td>Materia</td>
+                        <td>Hora</td>
+                        <td>Acceso</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="materia_reunion"/></td>
+                        <td><input type="text" id="hora"/></td>
+                        <td><input type="text" id="acceso" name="acceso"/></td>
+                    </tr>
+                </table>
+
+                <button>Agregar Fila</button>
+            </div>
+
+            <button id="actualizar" name="update">Actualizar</button>
+        </section>
+    </body>
+</html>

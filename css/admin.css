@@ -1,0 +1,118 @@
+/*General*/
+html, body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #B2DFDB;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="text"]{
+    border: 1px solid #1e1e1e;
+    border-radius: 2px;
+    background-color: #e1e1e1;
+    width: 100%;
+    height: 15px;
+}
+
+button{
+    width: 20%;
+    height: 30px;
+    margin: auto;
+    background-color: #08423b;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 900;
+    
+}
+
+table{
+    border: 2px solid #000;
+    margin:auto;
+}
+
+table td{
+    border: 2px solid #000;
+}
+
+/*cabecera*/
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: #FFC107;
+    color: #000;
+    border-bottom: 10px solid #fff;
+}
+
+header h1{
+    color: #000;
+    font-size: 40px;
+    padding: 25px 30px;
+    font-weight: 600;
+}
+
+/*section*/
+section{
+    width: 75%;
+    height: auto;
+    border: 4px solid #000;
+    border-radius: 20px;
+    background-color: #BDBDBD66;
+    margin: 30px auto;
+}
+
+section h2{
+    height: 50px;
+    font-size: 28px;
+    text-align: center;
+    padding: 0;
+    padding-top: 20px;
+    background-color: #1e1e1e60;
+    border-top: 3px solid #000;
+    color: #000;
+    margin: 0;
+}
+
+#radius{
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+    background-color: #ffee00;
+}
+
+section div{
+    margin: 30px auto;
+}
+
+section h3{
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+section .caja_fecha{
+    margin-bottom: 20px;
+}
+
+section .caja_fecha p{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.avisos{
+    height: 300px;
+}
+
+#actualizar{
+    background-color: #FFC107;
+    color: #000;
+    width: 100%;
+}
+
+#actualizacion{
+    margin-top: 0;
+}
+
+textarea{
+    font-family: 'Courier New', Courier, monospace;
+	width: 55%;
+	margin-left: 20%;
+}

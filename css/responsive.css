@@ -1,0 +1,69 @@
+/*Media Queries (Diseño responsive)*/
+
+@media( max-width : 440px)
+{
+    /*Diseño responive de la tabla*/
+    table{
+        width: 100%;
+    }
+
+    table tr{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        margin-bottom: 1em;
+    }   
+  
+    table thead{
+        display: none;
+    }
+  
+    table td[data-titulo]{
+        display: flex;
+    }
+  
+    table td[data-titulo]::before{
+        content: attr(data-titulo);
+        width: 80px;
+        font-weight: bolder;
+        font-size: 18px;
+        text-align: center;
+    }
+  
+    table td[data-titulo = "Materia:"]::before{
+        content: none;
+    }
+  
+    table td[data-titulo = "Materia:"]{
+        color: #fff;
+      background-color: #303F9F;
+      }
+
+    /*Acomodacion de las secciones (Uno debajo del otro)*/
+    section{
+        width:80%;
+        float: none;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    aside{
+        width: 80%;
+        position: relative;
+        float: none;
+        margin: auto;
+    }
+
+    /*Titulos y cabeceras*/
+    .cabeceras{
+        width: 100vw;
+    }
+
+    .cabecera h1{
+        font-size: 18px;
+    }
+
+    #horario, #tarea{
+        font-size: 20px;
+    }
+}

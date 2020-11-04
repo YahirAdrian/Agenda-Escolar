@@ -1,0 +1,4 @@
+Base de Datos:
+Nombre: AgendaEscolar
+Usuario: Agenda
+Contraseña: EnjoyCoding1;

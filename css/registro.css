@@ -1,0 +1,19 @@
+body{
+    height: 100%;;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+h1{
+    margin: auto;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (max-width: 350px){
+    body{
+        background-color: yellow;
+    }
+}
