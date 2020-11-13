@@ -1,0 +1,10 @@
+Si desean usar EXACTAMENTE la misma base de datos que yo cree
+en el video, les adjunte a este archivo el "Propietario.sql"
+el cual en su base de datos pueden darle "Importar" y seleccionan
+dicho archivo... 
+
+Pues no considero necesario esto ya que estamos aprendiendo
+y deberian practicar creando la tabla desde 0 :P
+
+
+Contacto@DostinHurtado.com
