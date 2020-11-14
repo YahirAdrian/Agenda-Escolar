@@ -12,7 +12,7 @@
             $tarea_calculo = $_GET['tarea_calculo'];
             $tarea_fisica = $_GET['tarea_fisica'];
             $tarea_ctsyv = $_GET['tarea_ctsyv'];
-            $tarea_wilfirdo = $_GET['tarea_wilfrido'];
+            $tarea_wilfrido = $_GET['tarea_wilfrido'];
             $tarea_ek = $_GET['tarea_ek'];
             $tarea_ingles = $_GET['tarea_ingles'];
             //Campos de horario:
@@ -39,27 +39,22 @@
                     die('Error de Conexion ('.$db->connect_error.')'.$db->connect_error);
                 }
                 
-                $DELETE_SQL =
-                "DELETE FROM Tareas WHERE Tareas.Materia = 'Calculo Integral';
-                DELETE FROM Tareas WHERE Tareas.Materia = 'Ingles';
-                DELETE FROM Tareas WHERE Tareas.Materia = 'CTSyV';
-                DELETE FROM Tareas WHERE Tareas.Materia = 'Aplicaciones Web (Wilfrido)';
-                DELETE FROM Tareas WHERE Tareas.Materia = 'Bases de Datos (Ek)';
-                DELETE FROM Tareas WHERE Tareas.Materia = 'Fisica';
-                ";
-                $conexion->multi_query($DELETE_SQL); 
+                $UPDATE_SQL_calculo = "UPDATE Tareas SET tarea = '$tarea_calculo' WHERE Tareas.materia = 'Calculo Integral';";
+                $UPDATE_SQL_INGLES = "UPDATE Tareas SET tarea = '$tarea_ingles' WHERE Tareas.materia = 'Ingles';";
+                $UPDATE_SQL_CTSYV = "UPDATE Tareas SET tarea = '$tarea_ctsyv' WHERE Tareas.materia = 'CTSyV';";
+                $UPDATE_SQL_WILFRIDO = "UPDATE Tareas SET tarea = '$tarea_wilfrido' WHERE Tareas.materia = 'Aplicaciones Web';";
+                $UPDATE_SQL_EK = "UPDATE Tareas SET tarea = '$tarea_ek' WHERE Tareas.materia = 'Bases de Datos';";
+                $UPDATE_SQL_FISICA ="UPDATE Tareas SET tarea = '$tarea_fisica' WHERE Tareas.materia = 'Fisica';";
 
-                $INSERT_SQL =
-                "INSERT INTO Tareas (id,materia,tarea) values (NULL,'Calculo Integral', '$tarea_calculo');
-                INSERT INTO Tareas (id,materia,tarea) values (NULL,'Ingles', '$tarea_ingles');
-                INSERT INTO Tareas (id,materia,tarea) values (NULL,'CTSyV', '$tarea_ctsyv');
-                INSERT INTO Tareas (id,materia,tarea) values (NULL,'Aplicaciones Web (Wilfrido)', '$tarea_wilfirdo');
-                INSERT INTO Tareas (id,materia,tarea) values (NULL,'Bases de Datos (Ek)', '$tarea_ek');
-                INSERT INTO Tareas (id,materia,tarea) values (NULL,'Fisica', '$tarea_fisica');
-                ";
-                $conexion->multi_query($INSERT_SQL); 
+                $conexion->multi_query($UPDATE_SQL_calculo);
+                $conexion->multi_query($UPDATE_SQL_INGLES);
+                $conexion->multi_query($UPDATE_SQL_CTSYV);
+                $conexion->multi_query($UPDATE_SQL_WILFRIDO);
+                $conexion->multi_query($UPDATE_SQL_EK);
+                $conexion->multi_query($UPDATE_SQL_FISICA);
 
                 echo("Actualizacion realizada con exito");
+                echo "<br/>" . $UPDATE_SQL;
                 $conexion ->close();
             }else{
                 echo("Contraseña incorrecta");
