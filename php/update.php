@@ -26,14 +26,13 @@
             //Contraseña:
             $campo_contrasena = $_POST['password'];
 
-           //Conexion a la base de datos:
-           $servername = "localhost";
-            $database = "id15224713_agendaescolar";
-            $username = "id15224713_agenda";
-            $password = "EnjoyCoding1;";
-
             if($campo_contrasena == "EnjoyCoding1")
             {
+                //Conexion a la base de datos:
+                $servername = "localhost";
+                $database = "id15224713_agendaescolar";
+                $username = "id15224713_agenda";
+                $password = "EnjoyCoding1;";
                 $conexion = new mysqli($servername, $username, $password, $database);
 
                 if ($conexion->connect_error){

@@ -8,7 +8,17 @@
     </head>
 
     <body>
-
+        <?php
+            $servername = "localhost";
+            $database = "id15224713_agendaescolar";
+            $username = "id15224713_agenda";
+            $password = "EnjoyCoding1;";
+            $conexion = new mysqli($servername, $username, $password, $database);
+        
+            if ($conexion->connect_error){
+                die('Error de Conexion ('.$db->connect_error.')'.$db->connect_error);
+            }
+        ?>
         <div id="menu">
             <ul class="nav-links">
                 <li>Opción 1</li>
@@ -26,7 +36,16 @@
 
         <section>
             <div class="tabla">
-                <p id="hora-actualizacion">Actualizado: Jueves 12 de Noviembre a las 4:28 pm</p>
+                <p id="hora-actualizacion">
+                    <?php
+                        $consulta_hora = "SELECT * FROM Reuniones WHERE Materia = 'Actualizacion'";
+                        $resultados = mysqli_query($conexion, $consulta_hora);
+                        while($consulta = mysqli_fetch_array($resultados))
+                        {
+                          echo "Actualizado: " . $consulta['Hora']; //campo
+                        }
+                    ?>
+                </p>
                 <hr/>
                 <h1 id="tarea">Tareas de hoy</h1>
                 <table>
@@ -38,34 +57,26 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td data-titulo="Materia:">Física</td>
-                            <td>
-                                <ul>
-                                    <li>Entregar Actividades pendientes</li>
-                                    <li><span class="examen">Examen mañana en su hora de clase</span></li>
-                                </ul>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td data-titulo="Materia:">Aplicaciones Web (Wilfrido)</td>
-                            <td>
-                                <ul>
-                                    <li>Integrantes del Equipo y descripción del proyecto los que faltan por entregar. Entregar al correo: wilfirdo_dzib@hotmail.com</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td data-titulo="Materia:">Cálculo Integral</td>
-                            <td>
-                                <ul>
-                                    <li>Foro 2. Fecha límite: Viernes 13 de Noviembre a las 11:00pm</li>
-                                    <li><span class="examen">Examen segundo parcial.Cierra mañana a las 11:00pm </span></li>
-                                </ul>
-                            </td>
-                        </tr>
+                        <?php
+                            $query = "SELECT * FROM Tareas";
+                            $result = $conexion->query($query);
+                            $numfilas = $result->num_rows;
+                            //echo "El número de elementos es ".$numfilas;
+    
+                            for ($x=0;$x<$numfilas;$x++) {
+                                $fila = $result->fetch_object();
+                                
+                                if($fila->tarea != 'N/A')
+                                {
+                                    echo "<tr>";
+                                    echo "<td  data-titulo='Materia:'>" . $fila->materia . "</td>";
+                                    echo "<td><ul>" . $fila->tarea . "</ul></td>";
+                                    echo "</tr>";
+                                }
+                            }
+    
+                            $result->free();
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -84,10 +95,25 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td data-titulo="Materia:">Física</td>
-                            <td data-titulo="Hora:" class="examen">7:00 - 7:50 Examen segundo parcial</td>
-                        </tr>
+                        <?php
+                                $query = "SELECT * FROM Reuniones LIMIT 0,5";
+                                $result = $conexion->query($query);
+                                $numfilas = $result->num_rows;
+
+                                for ($x=0;$x<$numfilas;$x++) {
+                                    $fila = $result->fetch_object();
+                                    
+                                    if($fila->Hora != 'N/A')
+                                    {
+                                    echo "<tr>";
+                                    echo "<td data-titulo='Materia:'>" . $fila->Materia . "</td>";
+                                    echo "<td><ul>" . $fila->Hora . "</ul></td>";
+                                    echo "</tr>";
+                                    }
+                                }
+        
+                                $result->free();
+                            ?>
                     </tbody>
                 </table>
                 
@@ -107,8 +133,6 @@
             </div>
             
             <div class="observacion_final">
-            <img src="src/Horario.png" alt="perro"/>
-            <p>Todo bien 👍</p>
             </div>
         </section>
         
@@ -141,7 +165,7 @@
                     <button>Aplicaciones Web</button><br>
                 </a>
 
-                <a href="https://meet.jit.si/5ampr---fis05---20-351-salon-virtual" target="_blank">
+                <a href="https://teams.microsoft.com/l/meetup-join/19%3a4da39991937c4eadac7eb735f6985cf3%40thread.tacv2/1605492323830?context=%7b%22Tid%22%3a%220bad2cd4-4544-4341-8f97-64f795fd55db%22%2c%22Oid%22%3a%22f7d43c2e-3996-479e-b84f-c5b3ac77ce37%22%7d" target="_blank">
                     <button>Física</button><br>
                 </a>
             </div>
