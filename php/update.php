@@ -26,13 +26,14 @@
             //Contraseña:
             $campo_contrasena = $_POST['password'];
 
+           //Conexion a la base de datos:
+           $servername = "localhost";
+            $database = "id15224713_agendaescolar";
+            $username = "id15224713_agenda";
+            $password = "EnjoyCoding1;";
+
             if($campo_contrasena == "EnjoyCoding1")
             {
-                //Conexion a la base de datos:
-                $servername = "localhost";
-                $database = "id15224713_agendaescolar";
-                $username = "id15224713_agenda";
-                $password = "EnjoyCoding1;";
                 $conexion = new mysqli($servername, $username, $password, $database);
 
                 if ($conexion->connect_error){
@@ -52,7 +53,7 @@
                 $UPDATE_HORARIO_WILFRIDO = "UPDATE Reuniones SET Hora = '$hora_wilfrido' WHERE Reuniones.Materia = 'Aplicaciones Web';";
                 $UPDATE_HORARIO_EK = "UPDATE Reuniones SET Hora = '$hora_ek' WHERE Reuniones.Materia = 'Bases de Datos';";
                 $UPDATE_HORARIO_FISICA = "UPDATE Reuniones SET Hora = '$hora_fisica' WHERE Reuniones.Materia = 'Fisica';";
-                $UPDATE_HORARIO_TIME = "UPDATE Reuniones SET Hora = '$hora_actualizacion' WHERE Reuniones.Materia = 'Actualizacion';";
+                $UPDATE_HORARIO_TIME = "UPDATE Reuniones SET Hora = 'z$hora_actualizacion' WHERE Reuniones.Materia = 'Actualizacion';";
 
                 $conexion->multi_query($UPDATE_SQL_calculo);
                 $conexion->multi_query($UPDATE_SQL_INGLES);
@@ -68,10 +69,10 @@
                 $conexion->multi_query($UPDATE_HORARIO_EK);
                 $conexion->multi_query($UPDATE_HORARIO_FISICA);
                 $conexion->multi_query($UPDATE_HORARIO_TIME);
-                $conexion ->close();
                 
                 echo "<h1>Actualizado con exito<h1>";
-                echo "<a href='../index.html'>Volver al inicio</a>";
+                echo "<a href='../index.php'>Volver al inicio</a>";
+                $conexion ->close();
             }else{
                 echo("Contraseña incorrecta");
             }
