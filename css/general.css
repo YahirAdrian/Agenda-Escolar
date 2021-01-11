@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+html, body{
+    margin: 0;
+    padding:0;
+    display: inline;
+    background-color: #C5CAE9;
+}
+
+form input[type = "text"]{
+    width: 80%;
+    height: 25px;
+    border: 2px solid #05065593;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    margin: auto 10px;
+}
+
+form input[type = "submit"]{
+    width: 30%;
+    height: 30px;
+    text-align: center;
+    border: 2.5px solid #232323;
+    background-color: #77ff45;
+    border-radius: 4px;
+    margin-left: 35%;
+    margin-top: 20px;
+    font-size: medium;
+    color: #000;
+}
