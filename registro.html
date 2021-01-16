@@ -3,7 +3,6 @@
         <title>Registro</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="css/login.css"/>
         <link rel="stylesheet" href="css/registro.css"/>
     </head>
 
@@ -25,21 +24,26 @@
                 <form action="php/registro.php" method="POST">
                     <h2>Registrarse</h2>
                     <div class="usuario">
-                        <p><span class="titulo-campo">Nombre:</span></p>
+                        <p><span class="titulo-campo">Nombres:</span></p>
                         <input type="text" placeholder="" id="user-field"/>
                     </div>
 
                     <div class="usuario">
-                        <p><span class="titulo-campo">Matricula:</span></p>
+                        <p><span class="titulo-campo">Apellidos:</span></p>
                         <input type="text" placeholder="" id="user-field"/>
                     </div>
 
                     <div class="password">
                         <p><span class="titulo-campo">Contraseña:</span></p>
-                        <input type="password" name="password" id="password-field"/>
+                        <input type="password" name="password" id="password-field1"/>
                     </div>
 
-                    <button type="submit">Iniciar sesión</button>
+                    <div class="password">
+                        <p><span class="titulo-campo">Confirma la contraseña:</span></p>
+                        <input type="password" name="password" id="password-field2"/>
+                    </div>
+
+                    <button type="submit">Registrarme</button>
                 </form>
             </div>
        </section>

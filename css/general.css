@@ -4,16 +4,18 @@ html, body{
     margin: 0;
     padding:0;
     display: inline;
+    font-family: 'Nunito', sans-serif;
     background-color: #C5CAE9;
 }
 
-form input[type = "text"]{
+form input, textarea{
     width: 80%;
     height: 25px;
     border: 2px solid #05065593;
     border-radius: 4px;
     background-color: #f1f1f1;
     margin: auto 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 form input[type = "submit"]{
