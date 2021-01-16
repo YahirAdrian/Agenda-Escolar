@@ -1,0 +1,46 @@
+
+/*Estilos de las tablas de tareas*/
+
+table{
+    margin: 15px auto;
+    padding: 10px;
+    width: 80%;
+    height: auto;
+    border-collapse: collapse;
+}
+
+table thead{
+    background-color: #ff4155;
+    text-align: center;
+    color: #fff;
+}
+
+table td, th{
+    border: 1px solid #000;
+}
+
+table td:first-child{
+    text-align: center;
+}
+
+table td:nth-child(n+2){
+    padding: 0;
+}
+
+
+materia{
+    border-bottom: 1px solid #000;
+    display: block;
+}
+
+materia:last-child{
+    border-bottom: none;
+}
+
+materia, td, th{
+    padding: 10px;
+}
+
+materia{
+    width: auto;
+}

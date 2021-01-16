@@ -1,0 +1,102 @@
+@import url('general.css');
+@import url('cabecera.css');
+
+header{
+    margin-bottom: 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+header h1{
+    align-self: center;
+}
+/*estilos el menú*/
+.menu-final{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+    min-width: 200px;
+    max-width: 350px;
+}
+
+.caja-icono img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+#numero-notificaciones{
+    position: relative;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 400;
+    background-color: #FF4155;
+    border-radius: 50%;
+    right: 24px;
+    bottom: 32px;
+    padding: 4px;
+
+}
+
+#nombre-usuario{
+    display: block;
+    font-size: 12px;
+    max-width: 80px;
+}
+
+/* Estilos de la seccion principal*/
+
+section{
+    width: 80%;
+    margin: 30px auto;
+    padding-bottom: 50px;
+    background-color: #fff;
+    border-radius: 3px;
+    display: block;
+}
+
+#archivo{
+    width: auto;
+    height: auto;
+    border: none;
+}
+
+.foto, .info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto img{
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.info{
+    width: 80%;
+    margin:  auto;
+    margin-top: 50px;
+    border-top: 3px solid #686868;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    background-color: #C5CAE9;
+}
+
+.info p{
+    padding: 5px 20px;
+    font-size: 18px;
+}
+
+.info p span{
+    color: #888888
+}

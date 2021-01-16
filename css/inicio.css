@@ -1,0 +1,190 @@
+@import url('cabecera.css');
+@import url('tablas.css');
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    background: #e1e1e1;
+}
+
+header{
+    margin-bottom: 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+header h1{
+    align-self: center;
+}
+/*estilos el menú*/
+.menu-final{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+    min-width: 200px;
+    max-width: 350px;
+}
+
+.caja-icono img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+#numero-notificaciones{
+    position: relative;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 400;
+    background-color: #FF4155;
+    border-radius: 50%;
+    right: 24px;
+    bottom: 32px;
+    padding: 4px;
+
+}
+
+#nombre-usuario{
+    display: block;
+    font-size: 12px;
+    max-width: 80px;
+}
+/*Estilos de la caja grupo*/
+.grupo{
+    display: inline-block;
+    background-color: #FFC107;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    width: 30vw;
+    min-width: 200px;
+    max-width: 350px;
+    height: auto;
+    border-bottom: 2.5px solid #fff;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-5px);
+    z-index: 1;
+}
+
+.grupo h2{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+section{
+    height: auto;
+    width: auto;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+}
+
+/*Contenido de la seccion de tareas*/
+.tareas{
+    width: 64vw;
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.tareas h3{
+    margin: 0;
+    font-size: 28px;
+    background-color: #ffc107;
+    color: #000;
+    padding-top: 5px;
+    text-align: center;
+    width: 100%;
+    /* text-shadow: 2px 2px 2px #00000065; */
+    border-bottom: 2px solid #a1a1a1;
+    border-top: 2px solid #a1a1a1;
+}
+
+#primero{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top: none;
+}
+
+/*Barra lateral*/
+
+aside{
+    width: 25vw;
+    height: 100%;
+    /* margin-top: 35px; */
+    margin-left: 50px;
+    display: inline-block;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+aside, .tareas{
+    margin-top: 35px;
+}
+
+
+#caja-horario{
+    width: 100%;
+    height: auto;
+}
+
+#caja-horario img{
+    width: 100%;
+    height: 200px;
+}
+
+#caja-horario h3{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top: none;
+}
+
+#acceso{
+    width: 100%;
+    height: fit-content;
+}
+
+aside h3{
+    margin: 0;
+    font-size: 28px;
+    /* text-shadow: 2px 2px 2px #00000065; */
+    border-bottom: 2px solid #a1a1a1;
+    border-top: 2px solid #a1a1a1;
+    color: #000;
+    text-align: center;
+    background-color: #ffc107;
+}
+
+#acceso a{
+    display: block;
+    width: 80%;
+    height: 25px;
+    border: 2px solid #000;
+    color: #fff;
+    font-size: 18px;
+    background-color: #3F51B5;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    margin: 15px auto;
+}
+
+#ozelot{
+    background-color: #FF4155 !important;
+}
