@@ -1,0 +1,40 @@
+/* Página de inicio responsiva */
+
+@media (max-width: 500px) and (orientation: portrait){
+
+    /* CABECERA RESPONSIVA */
+
+    header{
+        max-height: 70px;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo h1{
+        font-size: 18px;
+        padding-left: 3px;
+    }
+
+    .logo img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .caja-registro a{
+        font-size: 14px;
+    }
+
+    /* CAJA DE REGISTRO */
+
+    .caja-sesion{
+        width: 115%;
+        font-size: 14px;
+    }
+
+    .caja-sesion img{
+        width: 90px;
+        height: 90px;
+    }
+}

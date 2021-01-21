@@ -25,7 +25,7 @@
                     <h3>Tareas</h3>
                     <button id="btnNuevaTarea" class="add-button">Agregar tarea <img src="src/mas.png"/ class="icon"></button>
 
-                    <div id="nueva-tarea">
+                    <div id="nueva-tarea" style="display:none">
                         <form action="#" method="post">
                             <div class="input-fields">
                                 <label for="materia">Materia</label>
@@ -74,6 +74,30 @@
                 <div class="reuniones">
                     <h3>Reuniones</h3>
 
+                    <button class="add-button" id="btnProgramarReunion">Programar</button>
+
+                    <form class="programar-reuniones" id="programar-reuniones" style="display:none">
+                        <table>
+                            <thead>
+                                <th>Materia</th>
+                                <th>Hora inicio</th>
+                                <th>Hora fin</th>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="materia-reunion" id="materia-reunion"></td>
+                                    <td><input type="time" name="hora-inicio" id="hora-inicio"></td>
+                                    <td><input type="time" name="hora-inicio" id="hora-fin"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="botones">
+                            <button id="nueva-fila" class="add-button">Fila <img src="src/mas.png" class="icon"/></button>
+                            <button type="submit" id="listo" name="listo" class="add-button">Listo</button>
+                        </div>
+                    </form>
+
                     <table>
                         <thead>
                             <th>Materia</th>
@@ -91,30 +115,6 @@
                             </tr>
                         </tbody>
                     </table>
-
-                    <button class="add-button">Programar</button>
-
-                    <form class="programar-reuniones">
-                        <table>
-                            <thead>
-                                <th>Materia</th>
-                                <th>Hora inicio</th>
-                                <th>Hora fin</th>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td><input type="text" name="materia-reunion" id="materia-reunion"></td>
-                                    <td><input type="time" name="hora-inicio" id="hora-inicio"></td>
-                                    <td><input type="time" name="hora-inicio" id="hora-fin"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="botones">
-                            <button id="nueva-fila" class="add-button">Agregar Fila <img src="src/mas.png" class="icon"/></button>
-                            <button type="submit" id="listo" name="listo" class="add-button">Listo</button>
-                        </div>
-                    </form>
                 </div>
 
                 
@@ -122,7 +122,7 @@
                     <h3>Avisos</h3>
                     <button id="nuevo-aviso" class="add-button">Nuevo aviso <img src="src/mas.png" class="icon"/></button>
                     
-                    <form action="#" method="POST">
+                    <form action="#" method="POST" id="formulario-aviso" style="display:none">
                         <textarea name="aviso" id="aviso"></textarea>
                         <button type="submit" class="add-button" name="agregar-aviso" id="agregar-aviso">Agregar aviso</button>
                     </form>
@@ -133,5 +133,6 @@
                     <a href="foro.php" target="_blank"><button id="foro" class="add-button">Administrar foro</button></a>
                 </div>
             </section>
+            <script src="js/admin.js"></script>
     </body>
 </html>

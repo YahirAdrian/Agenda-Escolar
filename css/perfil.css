@@ -100,3 +100,22 @@ section{
 .info p span{
     color: #888888
 }
+
+@media (max-width: 500px){
+    header{
+        width: 100%;
+    }
+
+    header h1{
+        font-size: 15px;
+    }
+
+    .logo img, .caja-icono img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .caja-icono #nombre-usuario{
+        display: none;
+    }
+}

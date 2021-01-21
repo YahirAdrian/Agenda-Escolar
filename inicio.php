@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inicio</title>
         <link rel="stylesheet" href="css/inicio.css">
+        <link rel="stylesheet" href="css/responsive/inicio.css">
     </head>
     <body>
     <header>
@@ -15,12 +16,16 @@
 
             <div class="menu-final">
                 <div class="caja-icono">
-                    <img src="src/notificacion.png" alt="notificaciones"/>
-                    <span id="numero-notificaciones">.n.</span>
+                    <img src="src/notificacion.png" alt="notificaciones" id="icono-notificacion"/>
+                    <!-- <div id="numero-notificaciones">
+                        <span >.n.</span>
+                    </div> -->
+                    <div class="caja-notificaciones" style ="display:none">
+                    </div>
                 </div>
 
                 <div class="caja-icono">
-                <a href="foro.php"><img src="src/charla.png" alt="foro"/></a>
+                <a href="foro.php" style="display:none"><img src="src/charla.png" alt="foro"/></a>
                 </div>
 
                 <div class="caja-icono" id="icono-usuario">
@@ -37,8 +42,31 @@
 
         <section>
             <div class="tareas">
+
+                <div class="reuniones">
+                    <h3 id="primero">Reuniones para dd/mm</h3>
+                    <table>
+                        <thead>
+                            <th>Materia</th>
+                            <th>Hora</th>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Materia A</td>
+                                <td id="hora">hh:mm - hh:mm</td>
+                            </tr>
+
+                            <tr>
+                                <td>Materia A</td>
+                                <td id="hora">hh:mm - hh:mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <div id="por-entregar">
-                    <h3 id="primero">Tareas por entregar</h3>
+                    <h3>Tareas por entregar</h3>
                     <table>
                         <thead>
                             <th>Materia</th>
@@ -50,12 +78,12 @@
                                 <td>Materia A</td>
 
                                 <td class="tareas-lista">
-                                        <materia>Tarea 1</materia>
-                                        <materia>Tarea2</materia>
+                                        <materia> <input type="checkbox"/>Tarea 1</materia>
+                                        <materia> <input type="checkbox"/>Tarea2</materia>
                                 </td>
                                 <td class="fecha" rowspan="2">
-                                        <materia>  <input type="checkbox"/> dd/mm/aaaa a las hh:mm</materia>
-                                        <materia>  <input type="checkbox"/> dd/mm/aaaa a las hh:mm</materia>
+                                        <materia> dd/mm/aaaa a las hh:mm</materia>
+                                        <materia> dd/mm/aaaa a las hh:mm</materia>
                                 </td>
                             </tr>
                         </tbody>
@@ -75,12 +103,12 @@
                                 <td>Materia A</td>
 
                                 <td class="tareas-lista">
-                                        <materia>Tarea 1</materia>
-                                        <materia>Tarea2</materia>
+                                        <materia> <input type="checkbox"/>Tarea 1</materia>
+                                        <materia> <input type="checkbox"/>Tarea2</materia>
                                 </td>
                                 <td class="fecha" rowspan="2">
-                                        <materia>  <input type="checkbox"/> dd/mm/aaaa a las hh:mm</materia>
-                                        <materia>  <input type="checkbox"/> dd/mm/aaaa a las hh:mm</materia>
+                                        <materia> dd/mm/aaaa a las hh:mm</materia>
+                                        <materia> dd/mm/aaaa a las hh:mm</materia>
                                 </td>
                             </tr>
                         </tbody>
@@ -100,19 +128,19 @@
                                 <td>Materia A</td>
 
                                 <td class="tareas-lista">
-                                        <materia>Tarea 1</materia>
-                                        <materia>Tarea2</materia>
+                                        <materia> Tarea 1</materia>
+                                        <materia> Tarea2</materia>
                                 </td>
                                 <td class="fecha" rowspan="2">
-                                        <materia>  <input type="checkbox"/> dd/mm/aaaa a las hh:mm</materia>
-                                        <materia>  <input type="checkbox"/> dd/mm/aaaa a las hh:mm</materia>
+                                        <materia> dd/mm/aaaa a las hh:mm</materia>
+                                        <materia> dd/mm/aaaa a las hh:mm</materia>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-
+            <div id="gap"></div>
             <aside>
                 <div id="caja-horario">
                     <h3>Horario</h3>
@@ -131,5 +159,7 @@
 
             </aside>
         </section>
+
+        <script src="js/inicio.js"></script>
     </body>
 </html>

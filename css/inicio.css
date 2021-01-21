@@ -121,6 +121,10 @@ section{
     border-top: none;
 }
 
+#gap{
+    display:none;
+}
+
 /*Barra lateral*/
 
 aside{
@@ -187,4 +191,16 @@ aside h3{
 
 #ozelot{
     background-color: #FF4155 !important;
+}
+
+.caja-notificaciones{
+    width: 20%;
+    height: auto;
+    max-height: 240px;
+    position: absolute;
+    right: 1%;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    overflow-y: scroll;
 }

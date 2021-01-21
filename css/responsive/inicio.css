@@ -1,0 +1,71 @@
+@media (max-width: 500px) and (orientation: portrait){
+    header{
+        width: 100%;
+    }
+
+    header h1{
+        font-size: 15px;
+    }
+
+    .logo img, .caja-icono img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .caja-icono #nombre-usuario{
+        display: none;
+    }
+
+    table{
+        width: 92%;
+    }
+
+    table materia{
+        width: max-content;
+        max-width: 100px;
+    }
+
+    .fecha materia{
+        width: min-content;
+    }
+
+    #gap{
+        display: block;
+    }
+
+    section{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 30px 1fr;
+        width: 100%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    section aside, .tareas{
+        width: 85%;
+        margin: 30px auto;
+        display: block;
+    }
+}
+
+/* @media  (max-width: 900px){
+    section{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 30px 1fr;
+        width: 100%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    section aside, .tareas{
+        width: 65%;
+        margin: 30px auto;
+        display: block;
+    }
+
+    #caja-horario img{
+        max-width: 500px;
+        height: 300px;
+        padding: auto;
+    }
+} */

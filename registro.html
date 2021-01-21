@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="css/registro.css"/>
+        <link rel="stylesheet" href="css/responsive/index.css">
     </head>
 
     <body>
@@ -25,22 +26,22 @@
                     <h2>Registrarse</h2>
                     <div class="usuario">
                         <p><span class="titulo-campo">Nombres:</span></p>
-                        <input type="text" placeholder="" id="user-field"/>
+                        <input name="nombres" type="text" placeholder="" id="user-field"/>
                     </div>
 
                     <div class="usuario">
                         <p><span class="titulo-campo">Apellidos:</span></p>
-                        <input type="text" placeholder="" id="user-field"/>
+                        <input name="apellidos" type="text" placeholder="" id="user-field1"/>
                     </div>
 
                     <div class="password">
                         <p><span class="titulo-campo">Contraseña:</span></p>
-                        <input type="password" name="password" id="password-field1"/>
+                        <input type="password" name="password1" id="password-field1"/>
                     </div>
 
-                    <div class="password">
+                    <div class="password" id="repeat">
                         <p><span class="titulo-campo">Confirma la contraseña:</span></p>
-                        <input type="password" name="password" id="password-field2"/>
+                        <input type="password" name="password2" id="password-field2"/>
                     </div>
 
                     <button type="submit">Registrarme</button>
@@ -51,5 +52,7 @@
         <footer>
             
         </footer>
+
+        <script src="js/validacion-registro.js"></script>
     </body>
 </html>
