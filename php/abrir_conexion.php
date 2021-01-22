@@ -1,8 +1,8 @@
 <?php
-    $servername = "localhost:3306";
+    $servername = "localhost";
+    $database = "agenda_escolar";
     $username = "root";
     $password = "";
-    $database = "agenda_escolar";
 
     $conexion = new mysqli($servername, $username, $password, $database);
             

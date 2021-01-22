@@ -1,29 +1,32 @@
+<style>
+    @import url('../css/mensajes.css');
+</style>
+
 <?php
-      $servername = "localhost:3306";
-      $username = "root";
-      $password = "";
-      $database = "agenda_escolar";
-  
-      $conexion = new mysqli($servername, $username, $password, $database);
-              
-      if($conexion->connect_error){
-          die('Error de Conexion ('.$database->connect_error.')'.$database->connect_error);
-      }
+    require('abrir_conexion.php');
 
-    $nombres =$_POST['nombres'];
+    $nombres = $_POST['nombres'];
     $apellidos = $_POST['apellidos'];
-    $password1 = $_POST['password1'];
-    $password2 = $_POST['password2'];
+    $pass_formulario = $_POST['password1'];
 
-    if($password1 === $password2){
-        $query = "INSERT INTO usuarios (id, nombres, apellidos, pass fotos, datos) VALUES (NULL, '$nombres', '$apellidos','$password1' , '', '';";
-
-        if (mysqli_query($conexion, $query)) {
-          /*Si se hace la inserccion correctamente, se redirige al loging*/
-            echo "Registrado exitosamente";
-            echo "<center><a href='../index.html' style='width: 70%; height:50px; background:#85CDE8;'>Iniciar sesion</a></center>";
-        }
+    $sql = "INSERT INTO usuarios (id, nombres, apellidos, pass, foto, datos) VALUES (NULL, '$nombres', '$apellidos', '$pass_formulario', '', '');";
+    if (mysqli_query($conexion, $sql)) {
+        /*Si se hace la inserccion correctamente, se redirige al loging*/
+        echo "
+            <div class='mensaje'>
+                <img src='../src/icons/cheque.png' alt='check'/>
+                <p class='texto-mensaje'> Registro exitoso </p>
+            </div>
+        ";
+        echo "<script> setTimeout(()=> window.location = '../index.html', 2000);</script>";
     }else{
-        echo "Las contraseñas no coinciden";
+        echo "
+            <div class='mensaje'>
+                <img src='../src/icons/cerrar.png' alt='error'/>
+                <p class='texto-mensaje'> ¡Ocurrió un error! </p>
+            </div>
+        ";
     }
+    $conexion -> close();
+
 ?>

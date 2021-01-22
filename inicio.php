@@ -6,8 +6,64 @@
         <title>Inicio</title>
         <link rel="stylesheet" href="css/inicio.css">
         <link rel="stylesheet" href="css/responsive/inicio.css">
+        <style>
+            .mensaje{
+                text-align: center;
+            }
+            .mensaje img{
+                width: 400px;
+                height: 400px;
+            }
+
+            .texto-mensaje{
+                font-family: 'Nunito', sans-serif;
+                font-size: 20px;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
+
+    <?php
+        session_start();
+        if($_SESSION["usuario"] == "admin"){
+            header('location: admin.php');
+        }
+
+        require('php/abrir_conexion.php');
+        $usuario_id = $_SESSION["usuario"];
+
+        if($usuario_id == null || $usuario_id == ''){ //Verificar si ha iniciado sesion
+            echo "
+            <div class='mensaje'>
+                <img src='src/icons/cerrar.png' alt='error'/>
+                <p class='texto-mensaje'> Primero debes iniciar sesión </p>
+            </div>
+            ";
+
+            echo "<script> setTimeout(()=> window.location = 'index.html', 4000);</script>";
+            //de lo contrario, lo redirecciona al login
+
+            die();
+        }
+        //Obtener los datos del usuario
+        $consulta = "SELECT * FROM usuarios WHERE id = '$usuario_id';";
+        
+        $resultado = mysqli_query($conexion, $consulta);
+
+        if($resultado){
+            $fila = mysqli_fetch_row($resultado);
+
+            $id = $fila[0];
+            $nombres = $fila[1];
+            $apellidos = $fila[2];
+            $pass = $fila[3];
+            $foto = $fila[4];
+            $datos = $fila[5];
+        }
+
+        $conexion->close();
+    ?>
     <header>
             <div class="logo">
                 <img src="src/calendario.png" alt="icono"/>
@@ -30,7 +86,10 @@
 
                 <div class="caja-icono" id="icono-usuario">
                     <a href="perfil.php"><img src="src/usuario.png" alt="usuario" id="imagen-usuario"/></a>
-                    <span id="nombre-usuario">Yahir Adrian</span>
+                    <span id="nombre-usuario">
+                    <?php
+                     echo $nombres; 
+                     ?></span>
                 </div>
             </div>
             

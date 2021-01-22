@@ -131,3 +131,22 @@ h3{
     width: 90%;
     margin: 20px 5%;
 }
+
+#cerrar_sesion{
+    width: 80%;
+    margin:  30% auto;
+}
+
+#cerrar_sesion button{
+    width: 100%;
+    height: 30px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #FF4155;
+    border: 1px solid #fff;
+}
+
+#cerrar_sesion :hover{
+    background-color: #dd0016;
+    border: 1px solid #fff;
+}

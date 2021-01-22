@@ -6,9 +6,42 @@
         <title>Administración</title>
         <link rel="stylesheet" href="css/admin.css">
         <link rel="stylesheet" href="css/cabecera.css">
+        <style>
+            .mensaje{
+                text-align: center;
+            }
+            .mensaje img{
+                width: 400px;
+                height: 400px;
+            }
+
+            .texto-mensaje{
+                font-family: 'Nunito', sans-serif;
+                font-size: 20px;
+                text-align: center;
+            }
+        </style>
     </head>
 
     <body>
+
+        <?php
+            session_start();
+            $sesion = $_SESSION["usuario"];
+            if($sesion != "admin"){
+                echo "
+                    <div class='mensaje'>
+                        <img src='src/icons/cerrar.png' alt='error'/>
+                        <p class='texto-mensaje'> Primero debes iniciar sesión </p>
+                    </div>
+                ";
+
+                echo "<script> setTimeout(()=> window.location = 'index.html', 4000);</script>";
+                //de lo contrario, lo redirecciona al login
+
+                die();
+            }
+        ?>
         <header>
                 <div class="logo">
                     <img src="src/configuraciones.png" alt="icono"/>
@@ -131,6 +164,11 @@
                 <div class="foro">
                     <h3>Foro</h3>
                     <a href="foro.php" target="_blank"><button id="foro" class="add-button">Administrar foro</button></a>
+                </div>
+
+                <div class="foro">
+                    <h3>Cerrar Sesión</h3>
+                    <a href="php/cerrar_sesion.php" id="cerrar_sesion"><button>Cerrar Sesión</button></a>
                 </div>
             </section>
             <script src="js/admin.js"></script>

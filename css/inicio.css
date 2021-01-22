@@ -54,7 +54,9 @@ header h1{
 #nombre-usuario{
     display: block;
     font-size: 12px;
+    font-weight: 500;
     max-width: 80px;
+    color: #fff;
 }
 /*Estilos de la caja grupo*/
 .grupo{
@@ -196,6 +198,7 @@ aside h3{
 .caja-notificaciones{
     width: 20%;
     height: auto;
+    min-height: 80px;
     max-height: 240px;
     position: absolute;
     right: 1%;

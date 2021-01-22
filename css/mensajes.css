@@ -1,0 +1,17 @@
+body{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.mensaje img{
+    width: 400px;
+    height: 400px;
+}
+
+.texto-mensaje{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
