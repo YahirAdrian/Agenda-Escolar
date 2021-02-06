@@ -42,9 +42,35 @@ materia:last-child{
 }
 
 materia, td, th{
-    padding: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 materia{
     width: auto;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+td.no-color{
+    background-color: #fff;
+}
+
+table td[data-titulo = "Materia:"]{
+    background-color: #ff4658;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+}
+
+#tabla_entregadas tbody td, #tabla_vencidas tbody td{
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+#tabla_entregadas tbody td:first-child, #tabla_vencidas tbody td:first-child{
+    padding-left: 8px;
+    font-size: 17px;
+    background-color: #ff4658;
 }

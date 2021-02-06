@@ -8,7 +8,7 @@ html, body{
     background-color: #C5CAE9;
 }
 
-form input, textarea{
+form input, textarea, select{
     width: 80%;
     height: 25px;
     border: 2px solid #05065593;

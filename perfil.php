@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Perfil</title>
         <link rel="stylesheet" href="css/perfil.css"/>
+        <link rel="shortcut icon" href="src/icons/favicon.ico" type="image/x-icon">
         <style>
             .mensaje{
                 text-align: center;
@@ -63,23 +64,13 @@
         ?>
         <header>
                 <div class="logo">
-                    <img src="src/calendario.png" alt="icono"/>
+                    <a href="inicio.php"><img src="src/calendario.png" alt="icono"/></a>
                     <h1> Perfil - <?php echo $nombres . " " . $apellidos;?></h1>
                 </div>
 
                 <div class="menu-final">
-                    <div class="caja-icono">
-                        <img src="src/notificacion.png" alt="notificaciones"/>
-                        <span id="numero-notificaciones">.n.</span>
-                    </div>
-
-                    <div class="caja-icono">
+                    <div class="caja-icono" style="display:none">
                     <a href="foro.php"><img src="src/charla.png" alt="foro"/></a>
-                    </div>
-
-                    <div class="caja-icono" id="icono-usuario">
-                        <a href="perfil.php"><img src="src/usuario.png" alt="usuario" id="imagen-usuario"/></a>
-                        <span id="nombre-usuario">Yahir Adrian</span>
                     </div>
                 </div>
                 
@@ -87,25 +78,32 @@
 
         <section>
             <form action="#" method="POST" class="foto">
-                <?php
-                    if($foto == ''){
-                        //Colocamos las iniciales de su nombre
-                        echo "<img src='src/usuario.png' alt='foto perfil'/>";
-                    }else{
-                        //Colocamos su foto de perfil
-                        echo "<img src='src/usuario.png' alt='foto perfil'/>";
-                    }
-                ?>
-                <p id="editar">Cambiar foto</p>
-                <input type="file" name="archivo" id="archivo">
+                <div class="caja-icono" id="icono-usuario">
+                    <?php 
+                        echo "<a href='perfil.php' id='foto' style='background: $foto ;'>"
+                    ?>
+                    <span id="nombre" style="font-size: 35px">Ya</span>
+                        <!-- <img src="src/usuario.png" alt="usuario" id="imagen-usuario"/> -->
+                    </a>
+                </div>
+                <p id="editar" style="display:none">Cambiar foto</p>
+                <input type="file" name="archivo" id="archivo" style="display:none">
             </form>
 
             <div class="info">
-                <p class="info-dato">Nombre : <span><?php echo $nombres ?></span></p>
+                <p class="info-dato">Nombre : <span id="nombre-usuario"><?php echo $nombres ?></span></p>
                 <p class="info-dato">Apelldos : <span><?php echo $apellidos ?></span></p>
                 <p class="info-dato">Grupo : <span>6AMPR</span></p>
                 <a href="php/cerrar_sesion.php" id="cerrar_sesion"><button>Cerrar Sesion</button></a>
             </div>
         </section>
+
+        <script>
+            //ELEMENTOS DEL PERFIL
+            const foto = document.querySelector('#foto');
+            const spanLetraPerfil = document.querySelector('#nombre');
+            const nombres = document.querySelector('#nombre-usuario');
+            spanLetraPerfil.textContent = nombres.textContent.charAt(0).toUpperCase();
+        </script>
     </body>
 </html>
