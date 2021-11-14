@@ -10,9 +10,10 @@ La agenda es responsiva y aplicación web progresiva que funciona incluso estand
 + Foro final
 + Modo Offline
 + Aplicación web progresiva
++ Avisos
 
 ## Capturas de pantalla
 ![Pantalla de inicio](https://user-images.githubusercontent.com/52891749/141693418-4e455f8b-d057-4989-afb2-fffaa63516b2.png "Página de inicio")
 ![Inicio de sesión](https://github.com/YahirAdrian/Agenda-Escolar/blob/master/src/screenshots/Index.jpeg?raw=true "Login")
-![Página de administración](https://github.com/YahirAdrian/Agenda-Escolar/blob/master/src/screenshots/administracion.jpeg?raw=true "Administración"){width: 400, height: 800}
+![Página de administración](https://github.com/YahirAdrian/Agenda-Escolar/blob/master/src/screenshots/administracion.jpeg?raw=true "Administración")
 
