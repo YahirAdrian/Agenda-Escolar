@@ -1,0 +1,138 @@
+html, body{
+    background-color: #c1c1c1;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    margin:0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3F51B5;
+    border-bottom: 5px solid #fff;
+    border-bottom-right-radius: 8px;
+}
+
+.logo{
+    width: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img, .menu-final img{
+    width: 60px;
+    height: 60px;
+}
+
+.logo h1{
+    display: inline;
+    color: #fff;
+    margin: 0;
+}
+.caja-registro{
+    padding: 10px;
+    margin: 20px 30px;
+
+}
+.caja-registro a {
+    color: #fff;
+    font-size: 24px;
+}
+
+section{
+    background-color: #fff;
+    padding: 15px;
+    margin: 30px 20px;
+}
+
+.about h1{
+    color: #17225e;
+}
+
+.about p{
+    background: #adb7f0;
+    padding: 8px;
+    font-weight: 300;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+h2{
+    text-decoration: underline;
+    text-decoration-color: #17225e;
+}
+
+.features{
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    overflow: auto;
+    border: 1.5px solid #000;
+    border-radius: 2px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 4px;
+    margin: 10px;
+    display: inline;
+}
+
+.card h3{
+    color:#17225e;
+}
+
+.card img{
+    width: 100%;
+    height: 150px;
+}
+
+.card p{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 4px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.feature{
+    width: 85%;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e1e5fc;
+    margin: 20px 7%;
+    border: 1px solid #000;
+}
+
+@media(max-width: 500px){
+    .logo h1{
+        font-size: 18px;
+    }
+
+    .logo img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .caja-registro a{
+        font-size: 18px;
+    }
+}

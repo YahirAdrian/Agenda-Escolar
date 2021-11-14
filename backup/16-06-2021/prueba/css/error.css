@@ -1,0 +1,45 @@
+body{
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    background-color: #dee4fd;
+}
+
+.mensaje{
+    width: 70%;
+    height: 50%;
+    padding: 18px;
+    color: #e1e1e1;
+    border-radius: 3px;
+    background-color: #af5353;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.mensaje h1{
+    font-size: 30px;
+    color: #fff;
+}
+
+.mensaje p{
+    font-size: 18px;
+}
+
+.mensaje a{
+    color: #fff;
+    font-size: 17px;
+}
+
+@media(max-width:500px){
+    .mensaje{
+        height:fit-content;
+    }
+    
+    .mensaje h1{
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,15 @@
+@import url('login.css');
+form button{
+    background-color: #f71f35;
+    color: #fff;
+    
+}
+
+form button:hover{
+    background-color: #FF4155;
+    color: #fff;
+}
+
+.error{
+    color: red;
+}

@@ -1,0 +1,38 @@
+$servername = "localhost";
+$database = "id15224713_agendaescolar";
+$username = "id15224713_agenda";
+$password = "EnjoyCoding1;";
+            
+$db = new mysqli($servername, $username, $password, $database);
+
+if ($db->connect_error){
+    die('Error de Conexion ('.$db->connect_error.')'.$db->connect_error);
+}
+            
+$query = "SELECT * FROM Reuniones";
+$result = $db->query($query);
+$numfilas = $result->num_rows;
+//echo "El número de elementos es ".$numfilas;
+
+for ($x=0;$x<$numfilas;$x++) {
+    $fila = $result->fetch_object();
+    echo "<tr>";
+    echo "<td>" .$fila->Hora."</td>";
+    echo "<td>" .$fila->Materia."</td>";
+    echo "<td>" .$fila->Observacion."</td>";
+    echo "</tr>";
+}
+
+$result->free();
+$db->close();
+
+//------------------------------------------------------
+/*function getCurrentDateTime()
+        {
+        $fecha = date("d/m/y");
+        $hora = getdate();
+
+        $datetime = $fecha . " a las " . ($hora["hours"]-5) . ":" . $hora["minutes"];
+
+        return $datetime;
+        }*/
